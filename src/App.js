@@ -17,15 +17,16 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Switch>
         <Route exact path='projekt_SOC_Skor/' element={<Home/>}/>
         <Route exact path='/' element={<Home/>}/>
         <Route exact path='/home' element={<Home/>}/>
         <Route exact path='/signup' element={<Signup/>}/>
         <Route exact path='/login' element={<Login/>}/>
         <Route exact path='/cart' element={<Cart/>}/>
-        <Route exact path='/userprofile' element={<CartInfo/>}/>
+        <Route exact path='/userprofile' element={<UserProfile/>}/>
         <Route exact path='/addproduct' element={<Addproduct/>}/>
-        <Route exact path='/product-typemobiles' element={<Allproductpage type={'Mobile'}/>}/>
+        <Route exact path='/product-type/mobiles' element={<Allproductpage type={'Mobile'}/>}/>
         <Route exact path='/product-type/kamery' element={<Allproductpage type={'Kamery'}/>}/>
         <Route exact path='/product-type/laptopy' element={<Allproductpage type={'Laptopy'}/>}/>
         <Route exact path='/product-type/tablety' element={<Allproductpage type={'Tablety'}/>}/>
@@ -37,6 +38,8 @@ function App() {
         <Route exact path='/cartahoj' element={<CartInfo/>}/>
         <Route exact path='/cart/sumup' element={<CartFinal/>}/>
         <Route path='*' element={<PgFOF/>}/>
+        </Switch>
+       
       </Routes>
     </BrowserRouter>
   );
