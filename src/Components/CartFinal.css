@@ -55,3 +55,16 @@
     display: flex;
     justify-content: end;
 }
+
+.eh-start{
+    width: 25%;
+    text-align: start;
+}
+.eh{
+    width: 25%;
+    text-align: center;
+}
+.eh-end{
+    width: 25%;
+    text-align: end;
+}

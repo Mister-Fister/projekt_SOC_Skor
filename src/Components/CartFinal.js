@@ -248,13 +248,16 @@ const pokus = () => {
             <div className='final-nadpis'>SÚHRN OBJEDNÁVKY</div>
             <div>
             <div className='item-info-continer'>
-            <div>
+            <div className='eh-start'>
             názov
             </div>
-            <div>
+            <div className='eh'>
            počet
             </div>
-            <div>
+            <div className='eh'>
+            cena za kus
+            </div>
+            <div className='eh-end'>
             cena
             </div>
           </div>
@@ -265,16 +268,16 @@ const pokus = () => {
 
         {cartData.cartItems.map((item, index) => (
           <div className='item-info-continer' key={index}>
-            <div>
+            <div className='eh-start'>
             {item.producttitle}
             </div>
-            <div>
+            <div className='eh'>
             {item.quantity}
             </div>
-            <div>
+            <div className='eh'>
             {item.price}€
             </div>
-            <div>
+            <div className='eh-end'>
             {item.price*item.quantity}€
             </div>
           </div>

@@ -97,7 +97,7 @@ if(loggeduser){
             <a href='/product-type/laptopy'><button>Laptopy</button></a>
             <a href='/product-type/tablety'><button>Tablety</button></a>
             <a href='/product-type/klávensnice'><button>Klávensnice</button></a>
-            <a href='/product-type/myšky'><button>Myšky</button></a>
+            <a href='/product-type/myšky'><button>Myšy</button></a>
       </div>
     </div>
   )
