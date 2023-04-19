@@ -274,6 +274,9 @@ const pokus = () => {
             <div>
             {item.price}€
             </div>
+            <div>
+            {item.price*item.quantity}€
+            </div>
           </div>
         ))}
 
