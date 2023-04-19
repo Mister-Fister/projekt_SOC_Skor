@@ -33,7 +33,7 @@ function App() {
         <Route exact path='projekt_SOC_Skor/product/:type/:id' element={<Specificproductpage/>}/>
         <Route exact path='projekt_SOC_Skor/product/:type/:id/admin' element={<SpecificproductpageAdmin/>}/>
         <Route exact path='projekt_SOC_Skor/cartdata' element={<Cart/>}/>
-        <Route exact path='projekt_SOC_Skor/cart/ahoj' element={<CartInfo/>}/>
+        <Route exact path='projekt_SOC_Skor/cartahoj' element={<CartInfo/>}/>
         <Route exact path='projekt_SOC_Skor/cart/sumup' element={<CartFinal/>}/>
         <Route path='*' element={<PgFOF/>}/>
       </Routes>
