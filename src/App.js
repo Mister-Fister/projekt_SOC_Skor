@@ -17,24 +17,24 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route exact path='/' element={<Home/>}/>
-        <Route exact path='/home' element={<Home/>}/>
-        <Route exact path='/signup' element={<Signup/>}/>
-        <Route exact path='/login' element={<Login/>}/>
-        <Route exact path='/cart' element={<Cart/>}/>
-        <Route exact path='/userprofile' element={<UserProfile/>}/>
-        <Route exact path='/addproduct' element={<Addproduct/>}/>
-        <Route exact path='/product-type/mobiles' element={<Allproductpage type={'Mobile'}/>}/>
-        <Route exact path='/product-type/kamery' element={<Allproductpage type={'Kamery'}/>}/>
-        <Route exact path='/product-type/laptopy' element={<Allproductpage type={'Laptopy'}/>}/>
-        <Route exact path='/product-type/tablety' element={<Allproductpage type={'Tablety'}/>}/>
-        <Route exact path='/product-type/klávensnice' element={<Allproductpage type={'Klávensnice'}/>}/>
-        <Route exact path='/product-type/myšky' element={<Allproductpage type={'Myšky'}/>}/>
-        <Route exact path='/product/:type/:id' element={<Specificproductpage/>}/>
-        <Route exact path='/product/:type/:id/admin' element={<SpecificproductpageAdmin/>}/>
-        <Route exact path='/cartdata' element={<Cart/>}/>
-        <Route exact path='/cart/ahoj' element={<CartInfo/>}/>
-        <Route exact path='/cart/sumup' element={<CartFinal/>}/>
+        <Route exact path='projekt_SOC_Skor/' element={<Home/>}/>
+        <Route exact path='projekt_SOC_Skor/home' element={<Home/>}/>
+        <Route exact path='projekt_SOC_Skor/signup' element={<Signup/>}/>
+        <Route exact path='projekt_SOC_Skor/login' element={<Login/>}/>
+        <Route exact path='projekt_SOC_Skor/cart' element={<Cart/>}/>
+        <Route exact path='projekt_SOC_Skor/userprofile' element={<UserProfile/>}/>
+        <Route exact path='projekt_SOC_Skor/addproduct' element={<Addproduct/>}/>
+        <Route exact path='projekt_SOC_Skor/product-type/mobiles' element={<Allproductpage type={'Mobile'}/>}/>
+        <Route exact path='projekt_SOC_Skor/product-type/kamery' element={<Allproductpage type={'Kamery'}/>}/>
+        <Route exact path='projekt_SOC_Skor/product-type/laptopy' element={<Allproductpage type={'Laptopy'}/>}/>
+        <Route exact path='projekt_SOC_Skor/product-type/tablety' element={<Allproductpage type={'Tablety'}/>}/>
+        <Route exact path='projekt_SOC_Skor/product-type/klávensnice' element={<Allproductpage type={'Klávensnice'}/>}/>
+        <Route exact path='projekt_SOC_Skor/product-type/myšky' element={<Allproductpage type={'Myšky'}/>}/>
+        <Route exact path='projekt_SOC_Skor/product/:type/:id' element={<Specificproductpage/>}/>
+        <Route exact path='projekt_SOC_Skor/product/:type/:id/admin' element={<SpecificproductpageAdmin/>}/>
+        <Route exact path='projekt_SOC_Skor/cartdata' element={<Cart/>}/>
+        <Route exact path='projekt_SOC_Skor/cart/ahoj' element={<CartInfo/>}/>
+        <Route exact path='projekt_SOC_Skor/cart/sumup' element={<CartFinal/>}/>
         <Route path='*' element={<PgFOF/>}/>
       </Routes>
     </BrowserRouter>
