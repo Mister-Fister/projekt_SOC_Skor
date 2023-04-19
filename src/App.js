@@ -33,7 +33,7 @@ function App() {
         <Route exact path='/product/:type/:id' element={<Specificproductpage/>}/>
         <Route exact path='/product/:type/:id/admin' element={<SpecificproductpageAdmin/>}/>
         <Route exact path='/cartdata' element={<Cart/>}/>
-        <Route exact path='/cart/ahoj' element={<CartInfo/>}/>
+        <Route exact path='/cartahoj' element={<CartInfo/>}/>
         <Route exact path='/cart/sumup' element={<CartFinal/>}/>
         <Route path='*' element={<PgFOF/>}/>
       </Routes>
