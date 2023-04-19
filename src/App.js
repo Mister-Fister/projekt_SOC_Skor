@@ -20,7 +20,7 @@ function App() {
         <Route exact path='projekt_SOC_Skor/' element={<Home/>}/>
         <Route exact path='projekt_SOC_Skor/home' element={<Home/>}/>
         <Route exact path='projekt_SOC_Skor/signup' element={<Signup/>}/>
-        <Route exact path='projekt_SOC_Skor/login' element={<Login/>}/>
+        <Route exact path='/login' element={<Login/>}/>
         <Route exact path='projekt_SOC_Skor/cart' element={<Cart/>}/>
         <Route exact path='projekt_SOC_Skor/userprofile' element={<UserProfile/>}/>
         <Route exact path='projekt_SOC_Skor/addproduct' element={<Addproduct/>}/>
