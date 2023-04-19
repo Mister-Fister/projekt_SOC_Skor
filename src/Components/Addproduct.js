@@ -130,9 +130,6 @@ const handleChange = (event) => {
       setDescription('');
       setPrice('');
       setCustomersupport('');
-      setTimeout(() =>{
-        window.location.reload();
-      },2000) 
     } catch (error) {
       setSuccessMsg('');
       setUploadError(`Chyba pri pridávaní produktu: ${error.message}`);
