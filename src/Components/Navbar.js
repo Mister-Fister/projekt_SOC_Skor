@@ -92,7 +92,7 @@ if(loggeduser){
         </div>
       </div>
       <div className='product-types'>
-            <a href='/product-type/mobiles'><button>Mobily</button></a>
+            <a href='/product-typemobiles'><button>Mobily</button></a>
             <a href='/product-type/kamery'><button>Kamery</button></a>
             <a href='/product-type/laptopy'><button>Laptopy</button></a>
             <a href='/product-type/tablety'><button>Tablety</button></a>
