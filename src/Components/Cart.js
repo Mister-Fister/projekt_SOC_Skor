@@ -124,7 +124,7 @@ const [priceshow, setPriceshow] = useState("");
                   <a  href={`/home`}>
                     <button className='cart-btn-back' >Späť</button>
                   </a>
-                  <a href={`/cart/ahoj`}>
+                  <a href={`/cartahoj`}>
                     <button className='cart-btn-next'>Pokračovať</button>
                   </a>
               </div>
