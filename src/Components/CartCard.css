@@ -1,0 +1,111 @@
+.cart-prod-container{
+    display: flex;
+    margin: 5px;
+    border-radius: 10px;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-between;
+    width: 900px;
+    background-color: white;
+}
+.prodquantity-div-container{
+    width: 30%;
+}
+.cart-prod-imgtitle{
+    display: flex;
+    width: 30%;
+    align-items: center;
+    flex-direction: row;
+}
+.one-price-contianer{
+    width: 20%;
+}
+.prod-image{
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.prod-image img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.prod-title{
+    font-size: 22px;
+}
+.prodquantity-div{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: white;
+    padding: 10px 0px;
+    border-radius: 10px;
+    border: 2px solid black;
+    width: 120px;
+}
+
+.prodquantity-div button{
+    border: 2px solid grey;
+    background-color: white;
+    font-size: 20px;
+    color: rgb(56, 149, 236);
+    width: 30px;
+    height: 30px;
+    line-height: 0px;
+    border-radius: 40px;
+}
+
+.prodquantity-div p {
+    color: rgb(56, 149, 236);
+}
+
+.prodprice{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.saleprice{
+    font-size: 20px;
+    color: green;
+}
+.saleprice-one{
+    font-size: 20px;
+}
+.deletebtn{
+    width: 30px;
+    height: 30px;
+    border: none;
+}
+.deletebtn:hover {
+    border-radius: 30px;
+    width: 35px;
+    height: 35px;
+}
+.deletebtn img{
+    max-width: 90%;
+    max-height: 90%;
+}
+.just-flex{
+    display: flex;
+    align-items: center;
+}
+.smol-btn{
+    background-color:transparent;
+    border: none;
+    height: 40px;
+}
+.smol-img{
+    max-width: 30px;
+}
+.prodquantity-div-only{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: white;
+    padding: 10px 0px;
+    border-radius: 10px;
+    border: 2px none;
+    width: 120px;
+}

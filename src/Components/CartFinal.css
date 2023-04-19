@@ -1,0 +1,57 @@
+.final-container{
+    border: 1px solid grey;
+    width: 1000px;
+}
+.stat-container{
+    display: flex;
+    flex-direction: row;
+
+}
+.stat-show{
+    width: 300px;
+}
+.final{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1000px;
+}
+.final-container{
+    background-color: white;
+}
+.final-nadpis{
+    font-size: 20px;
+    margin: 10px;
+    font-weight: 700;
+}
+.final-buttons{
+    align-self: flex-end;
+    margin-top: 20px;
+}
+.just-flex{
+    display: flex;
+    justify-content: center;
+}
+.cart-btn-back{
+    border: none;
+    background-color: transparent;
+    margin-right: 20px;
+}
+.cart-btn-next{
+    border: none;
+    background-color: rgb(101, 165, 238);
+    color: white;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.item-info-continer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.right{
+    display: flex;
+    justify-content: end;
+}

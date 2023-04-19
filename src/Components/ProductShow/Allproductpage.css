@@ -1,0 +1,37 @@
+.allproductpage .heading{
+    background-color: grey;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.allproductpage .heading p{
+    font-size: 50px;
+}
+
+.allproductpage .allproductcontainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.sort-button {
+    background-color: white;
+    border: none;
+    border-radius: 4px;
+    color: #333;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px 10px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .sort-button.active {
+    background-color: #1e90ff;
+    color: white;
+  }

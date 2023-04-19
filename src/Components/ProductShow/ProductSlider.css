@@ -1,0 +1,14 @@
+.cardslider-container{
+    border: 1px solid rgb(71, 71, 71);
+    background-color: rgb(247, 246, 246);
+}
+.full{
+    text-decoration: none;
+}
+.cardslider-container2{
+    align-self: center;
+    border: 1px solid rgb(71, 71, 71);
+    background-color: rgb(247, 246, 246);
+    margin-left: 4%;
+    margin-right: 4%;
+}

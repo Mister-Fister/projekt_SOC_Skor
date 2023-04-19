@@ -1,0 +1,88 @@
+.product-container{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 250px;
+    margin: 5px;
+    border: 1px solid gray;
+    box-shadow: 0px 0px 5px 0px gray;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 650px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+body{
+    background-color: rgb(207, 207, 207);;
+}
+.product-image{
+    height: fit-content;
+    width: fit-content; 
+    max-width: 200px;
+    min-width: 200px;
+    max-height: 240px;
+    min-height: 240px;
+}
+
+
+.product-details{
+    width: 70%;
+}
+.product-title{
+    
+    margin-bottom: 5px;
+    font-size: clamp(20px, 2vw, 25px);
+    font-weight: 600;
+    background-color: white;
+    border: none;
+}
+.product-title:hover{
+    cursor: pointer;
+    color: orange;
+}
+.price-container{
+    display: flex;
+    padding: 0px;
+    margin: 0px;
+}
+.mrp
+.dph{
+    display: flex;
+    margin: 0px;
+    line-height: 0px;
+    padding: 5px;
+}
+
+.dph{
+    color: grey;
+}
+
+.mrp{
+    color: red;
+    font-size: 28px;
+}
+.buy-cart{
+    display: flex;
+    margin-top: 20px;
+    margin-left: 5px;
+    justify-content: left;
+}
+.buy-cart .btn{
+    margin-left: 25px;
+    background-color: white;
+    color: rgb(23, 185, 23);
+    border: 2px solid grey;
+    padding: 5px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.buy-cart .btn:hover{
+    background-color: green;
+    color: white;
+}
+.product-keyspecs{
+    font-size: 10px;
+    color: grey;
+    min-height: 200px;
+}
+
