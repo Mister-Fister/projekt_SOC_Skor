@@ -57,13 +57,13 @@ const Productcontainer = (product) => {
   const saleprice = mrp.toFixed(2);
   return (
     <div className='product-container'>
-      <a className='full' href={`/product/${p.producttype}/${p.id}`}>
+      <Link className='full' to={`/product/${p.producttype}/${p.id}`}>
       <img src={p.productimage[0]} className="product-image"></img>
-      </a>
+      </Link>
       <div className='product-details'>   
-      <a className='full' href={`/product/${p.producttype}/${p.id}`}>
+      <Link className='full' to={`/product/${p.producttype}/${p.id}`}>
         <button className='product-title'>{p.producttitle}</button>
-      </a> 
+      </Link> 
       <p className='product-keyspecs'>
         {p.keyspecs}
       </p>

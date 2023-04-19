@@ -94,14 +94,12 @@ if(loggeduser){
       <div className='product-types'>
         <Link to='/product-type/mobiles'>
           <button>Mobily</button>
-        </Link>
-        <Link to='/product-type/mobiles'></Link>
-            
-            <a href='/product-type/kamery'><button>Kamery</button></a>
-            <a href='/product-type/laptopy'><button>Laptopy</button></a>
-            <a href='/product-type/tablety'><button>Tablety</button></a>
-            <a href='/product-type/klávensnice'><button>Klávensnice</button></a>
-            <a href='/product-type/myšky'><button>Myšy</button></a>
+        </Link>      
+            <Link to='/product-type/kamery'><button>Kamery</button></Link>
+            <Link to='/product-type/laptopy'><button>Laptopy</button></Link>
+            <Link to='/product-type/tablety'><button>Tablety</button></Link>
+            <Link to='/product-type/klávensnice'><button>Klávensnice</button></Link>
+            <Link to='/product-type/myšky'><button>Myšy</button></Link>
       </div>
     </div>
   )
