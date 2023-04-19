@@ -19,7 +19,7 @@ function App() {
       <Routes>
         <Route exact path='/' element={<Home/>}/>
         <Route exact path='/home' element={<Home/>}/>
-        <Route exact path='/signup' element={<Signup/>}/>
+        <Route exact path='projekt_SOC_Skor/signup' element={<Signup/>}/>
         <Route exact path='/login' element={<Login/>}/>
         <Route exact path='/cart' element={<Cart/>}/>
         <Route exact path='/userprofile' element={<UserProfile/>}/>
