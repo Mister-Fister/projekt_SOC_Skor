@@ -92,10 +92,8 @@ if(loggeduser){
         </div>
       </div>
       <div className='product-types'>
-        <Link to='/product-type/mobiles'>
-          <button>Mobily</button>
-        </Link>      
-            <Link to='/product-type/kamery'><button>Kamery</button></Link>
+            <Link to='/product-type/mobiles'><button>Mobily</button></Link>      
+            <Link to='/product-typ/kamery'><button>Kamery</button></Link>
             <Link to='/product-type/laptopy'><button>Laptopy</button></Link>
             <Link to='/product-type/tablety'><button>Tablety</button></Link>
             <Link to='/product-type/klávensnice'><button>Klávensnice</button></Link>

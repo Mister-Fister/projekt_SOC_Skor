@@ -125,10 +125,7 @@ const Specificproductpage = () => {
         brand: brandupdate,
         warranty: warrantyupdate
       });    
-      setTimeout(() =>{
-       setTitleupdate('');
-        window.location.reload();
-      },2000)    
+         
     }
     
 

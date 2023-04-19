@@ -1,5 +1,6 @@
 import React, { useState, useEffect} from 'react'
 import {auth,db} from '../../FirebaseConfigs/FirebaseConfig'
+import {Link} from 'react-router-dom'
 import { collection, getDocs, query, QuerySnapshot, where, doc, updateDoc, addDoc  } from 'firebase/firestore'
 
 import './Productcontainer.css'

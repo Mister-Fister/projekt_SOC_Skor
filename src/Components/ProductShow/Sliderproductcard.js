@@ -1,4 +1,5 @@
 import React, { useState, useEffect} from 'react'
+import {Link} from 'react-router-dom'
 import {auth,db} from '../../FirebaseConfigs/FirebaseConfig'
 import { collection, getDocs, query, QuerySnapshot, where, doc, updateDoc, addDoc  } from 'firebase/firestore'
 import './Sliderproductcard.css'
@@ -57,9 +58,9 @@ const Sliderproductcard = (product) => {
   return (
     <div className='mini-product-container'>
       <div className='mini-img-container'>
-        <a href={`/product/${p.producttype}/${p.id}`}>
+        <Link to={`/product/${p.producttype}/${p.id}`}>
           <img src={product.product.productimage}></img>
-        </a>
+        </Link>
       </div>
       <div className='mini-product-details'>
         <p className='mini-producttitle'>{product.product.producttitle}</p>

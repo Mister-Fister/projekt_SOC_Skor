@@ -26,7 +26,7 @@ function App() {
           <Route exact path='/userprofile' element={<UserProfile/>}/>
           <Route exact path='/addproduct' element={<Addproduct/>}/>
           <Route exact path='/product-type/mobiles' element={<Allproductpage type={'Mobile'}/>}/>
-          <Route exact path='/product-type/kamery' element={<Allproductpage type={'Kamery'}/>}/>
+          <Route exact path='/product-typ/kamery' element={<Allproductpage type={'Kamery'}/>}/>
           <Route exact path='/product-type/laptopy' element={<Allproductpage type={'Laptopy'}/>}/>
           <Route exact path='/product-type/tablety' element={<Allproductpage type={'Tablety'}/>}/>
           <Route exact path='/product-type/klávensnice' element={<Allproductpage type={'Klávensnice'}/>}/>
