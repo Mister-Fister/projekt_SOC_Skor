@@ -1,10 +1,12 @@
 import React, { useState, useEffect} from 'react'
-import {Link} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 import {auth,db} from '../../FirebaseConfigs/FirebaseConfig'
 import { collection, getDocs, query, QuerySnapshot, where, doc, updateDoc, addDoc  } from 'firebase/firestore'
 import './Sliderproductcard.css'
 
 const Sliderproductcard = (product) => {
+
+  const navigate = useNavigate()
 
   const[succcessMsg,setSuccessMsg] = useState('')
   const[errorMsg,setErrorMsg] = useState('')
@@ -55,12 +57,20 @@ const Sliderproductcard = (product) => {
     mrp = mrp + mrp*tax
     const saleprice = mrp.toFixed(2);
     let p = product.product;
+
+    const loading = () => {
+      navigate("/loading");
+      setTimeout(() => {
+        navigate(`/product/${p.producttype}/${p.id}`, { replace: true });
+      }, 20);
+    }
+
   return (
     <div className='mini-product-container'>
       <div className='mini-img-container'>
-        <Link to={`/product/${p.producttype}/${p.id}`}>
+        <button className='clean' onClick={loading}>
           <img src={product.product.productimage}></img>
-        </Link>
+        </button>
       </div>
       <div className='mini-product-details'>
         <p className='mini-producttitle'>{product.product.producttitle}</p>

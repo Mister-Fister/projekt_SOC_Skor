@@ -77,3 +77,8 @@
   .mini-price-container {
     text-align: center;
   }
+
+  .clean{
+    border: none;
+    background-color: white;
+  }
