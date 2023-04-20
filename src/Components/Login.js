@@ -15,7 +15,7 @@ const Login = () => {
     e.preventDefault()
     signInWithEmailAndPassword(auth,email,password)
     .then((useCredential) => {
-      setSuccessMrg('Prihlásili sthe sa úspešne')
+      setSuccessMrg('Prihlásili ste sa úspešne')
 
       //console.log(loggeduser.email)
       setEmail('')

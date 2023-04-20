@@ -44,6 +44,12 @@ const handleSortDescending = () => {
   setSortDirection("desc");
 };
 
+useEffect(() => {
+  fetch(`/api/products?type=${props}`)
+    .then(response => response.json())
+    .then(data => setProducts(data));
+}, [props]);
+
   return (
     <div className='allproductpage'>
       <Navbar/>
@@ -70,9 +76,7 @@ const handleSortDescending = () => {
             product={product}
             />           
         ))
-
-        }
-        
+        }       
       </div>
     </div>
   )

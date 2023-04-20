@@ -88,6 +88,13 @@ const Specificproductpage = () => {
       })
     }
 
+    const loading = () => {
+      navigate("/loading");
+      setTimeout(() => {
+        navigate(`/product/${product.producttype}/${id}/Admin`, { replace: true });
+      }, 20);
+    }
+
 
     
     const[keyspecsupdate, setKeyspecs] = useState('');
@@ -116,6 +123,7 @@ const Specificproductpage = () => {
       setKeyspecs(String(product.keyspecs))
     },[product])
 
+
     const handleUpdateTitle = () =>{
       updateDoc(doc(db,`products-${type.toUpperCase()}`, id),{
         producttitle: titleupdate,
@@ -124,9 +132,13 @@ const Specificproductpage = () => {
         price: priceupdate,
         brand: brandupdate,
         warranty: warrantyupdate
-      });    
+      }).then(
+        loading
+      );    
          
     }
+
+    
     
 
   return (

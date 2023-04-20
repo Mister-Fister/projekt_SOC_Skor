@@ -15,7 +15,8 @@ const CartFinal = () => {
 
 
  
- 
+  const [succcessMsg, setSuccessMrg] =useState("");
+
     const navigate = useNavigate();
     const firebaseConfig = {
         apiKey: "AIzaSyClmLHHI40s5L-VUY8h-TK0Su7zj6mmK44",
@@ -148,6 +149,7 @@ const pokus = () => {
     })
     .then(response => response.text())
     .then(data => console.log(data))
+    .then(setSuccessMrg('Objednávka úspešne ukončená'))
     .catch(error => console.error(error))
   ])
   .then(() => setTimeout(() => navigate('/home'), 2000))
@@ -313,8 +315,13 @@ const pokus = () => {
             </div>
             
             </div>
+            {succcessMsg && <>
+              <div className='success-msg'>
+                {succcessMsg}
+              </div></>}
             
         </div>
+        
        
       ) 
     };

@@ -39,6 +39,43 @@ const handleLogout = () =>{
   })
 }
 
+const loading1 = () => {
+  navigate("/loading");
+  setTimeout(() => {
+    navigate("/product-type/mobiles", { replace: true });
+  }, 20);
+}
+const loading2 = () => {
+  navigate("/loading");
+  setTimeout(() => {
+    navigate("/product-type/kamery", { replace: true });
+  }, 20);
+}
+const loading3 = () => {
+  navigate("/loading");
+  setTimeout(() => {
+    navigate("/product-type/laptopy", { replace: true });
+  }, 20);
+}
+const loading4 = () => {
+  navigate("/loading");
+  setTimeout(() => {
+    navigate("/product-type/tablety", { replace: true });
+  }, 20);
+}
+const loading5 = () => {
+  navigate("/loading");
+  setTimeout(() => {
+    navigate("/product-type/klávensnice", { replace: true });
+  }, 20);
+}
+const loading6 = () => {
+  navigate("/loading");
+  setTimeout(() => {
+    navigate("/product-type/myšky", { replace: true });
+  }, 20);
+}
+
 const[cartdata, setcartdata] = useState([]);
 if(loggeduser){
   const getcartdata = async () =>{
@@ -53,6 +90,8 @@ if(loggeduser){
   }
   getcartdata()
 }
+
+
 
   return (
     <div>
@@ -92,12 +131,12 @@ if(loggeduser){
         </div>
       </div>
       <div className='product-types'>
-            <Link to='/product-type/mobiles'><button>Mobily</button></Link>      
-            <Link to='/product-typ/kamery'><button>Kamery</button></Link>
-            <Link to='/product-type/laptopy'><button>Laptopy</button></Link>
-            <Link to='/product-type/tablety'><button>Tablety</button></Link>
-            <Link to='/product-type/klávensnice'><button>Klávensnice</button></Link>
-            <Link to='/product-type/myšky'><button>Myšy</button></Link>
+            <button onClick={loading1}>Mobily</button>   
+            <button onClick={loading2}>Kamery</button>
+            <button onClick={loading3}>Laptopy</button>
+            <button onClick={loading4}>Tablety</button>
+            <button onClick={loading5}>Klávensnice</button>
+            <button onClick={loading6}>Myšy</button>
       </div>
     </div>
   )

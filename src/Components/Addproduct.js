@@ -14,7 +14,7 @@ const Addproduct = () => {
   
 
 
-
+  const navigate = useNavigate();
     const[producttitle, setProductTitle] =useState('')
     const[producttype, setProductType] =useState('')
     const[description, setDescription] =useState('')
@@ -83,6 +83,14 @@ const Addproduct = () => {
 
   const [value, setValue] = useState('');
 
+
+  const loading = () => {
+    navigate("/loading");
+    setTimeout(() => {
+      navigate(`/addproduct`, { replace: true });
+    }, 100);
+  }
+
 const handleChange = (event) => {
 
   setValue(event.target.value);
@@ -129,12 +137,18 @@ const handleChange = (event) => {
       setProductImage(null);
       setDescription('');
       setPrice('');
-      setCustomersupport('');
+      setCustomersupport('')
+      setTimeout(() =>{
+        loading()
+      },2000) 
     } catch (error) {
       setSuccessMsg('');
-      setUploadError(`Chyba pri pridávaní produktu: ${error.message}`);
+      setUploadError(`Chyba pri pridávaní produktu: ${error.message}`)
+      ;
     }
   };
+
+
   return (
     <div>
         <Navbar/>
