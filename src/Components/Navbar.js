@@ -137,6 +137,7 @@ if(loggeduser){
             <button onClick={loading4}>Tablety</button>
             <button onClick={loading5}>Klávensnice</button>
             <button onClick={loading6}>Myšy</button>
+            
       </div>
     </div>
   )
