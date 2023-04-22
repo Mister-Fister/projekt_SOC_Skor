@@ -13,6 +13,7 @@ import SpecificproductpageAdmin from './Components/ProductShow/Specificproductpa
 import CartInfo from './Components/CartInfo';
 import CartFinal from './Components/CartFinal';
 import Loading from './Components/ProductShow/Loading';
+import NewPassword from './Components/NewPassword';
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
           <Route exact path='/cartahoj' element={<CartInfo/>}/>
           <Route exact path='/cart/sumup' element={<CartFinal/>}/>
           <Route exact path='/loading' element={<Loading/>}/>
+          <Route exact path='/newpass' element={<NewPassword/>}/>
           <Route path='*' element={<PgFOF/>}/>
      
       </Routes>

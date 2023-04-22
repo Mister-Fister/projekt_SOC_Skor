@@ -2,6 +2,7 @@ import React, { useState, useEffect} from 'react'
 import {auth,db} from '../FirebaseConfigs/FirebaseConfig'
 import { initializeApp } from "firebase/app";
 import { getDatabase ,ref, set} from "firebase/database";
+import { Link } from 'react-router-dom';
 import Navbar from './Navbar'
 import firebase from "firebase/app";
 import "./CartFinal.css"
@@ -306,9 +307,9 @@ const pokus = () => {
 
             </div>
             <div className='final-buttons'>            
-              <a  href={`/cart/ahoj`}>
+              <Link  to={`/cartahoj`}>
                       <button className='cart-btn-back'>Späť</button>
-              </a>
+              </Link >
               <button className='cart-btn-next' onClick={pokus}>Potvrdiť nákup</button>
             </div>
             
