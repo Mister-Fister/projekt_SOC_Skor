@@ -29,13 +29,20 @@ body{
     width: 70%;
 }
 .product-title{
-    
+    word-wrap: break-word;
+    max-width: 80%;
     margin-bottom: 5px;
     font-size: clamp(20px, 2vw, 25px);
     font-weight: 600;
     background-color: white;
     border: none;
 }
+@media screen and (max-width: 768px) {
+    /* adjust font size when screen width is less than or equal to 768px */
+    .product-title {
+      font-size: 1.2rem; /* adjust font size as needed */
+    }
+  }
 .product-title:hover{
     cursor: pointer;
     color: orange;
