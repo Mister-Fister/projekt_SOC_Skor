@@ -198,7 +198,7 @@ const handleMethod = (event) => {
                     <button className='cart-btn-back' >Späť</button>
                   </Link>
                   <Link to="/cart/sumup">
-                    <button onClick={handlefinishedcart}>Pokračovať</button>
+                    <button className='cart-btn-next' onClick={handlefinishedcart}>Pokračovať</button>
                   </Link>
               </div>
             </div>     
