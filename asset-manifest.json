@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/projekt_SOC_Skor/static/css/main.b8e7e2c0.css",
+    "main.css": "/projekt_SOC_Skor/static/css/main.084a63fa.css",
     "main.js": "/projekt_SOC_Skor/static/js/main.31f8baed.js",
     "static/media/banner2.jpg": "/projekt_SOC_Skor/static/media/banner2.541c71e24bbc38df7c3e.jpg",
     "static/media/banner3.jpg": "/projekt_SOC_Skor/static/media/banner3.ed154f93d2380759c70d.jpg",
@@ -13,11 +13,11 @@
     "static/media/revicons.ttf": "/projekt_SOC_Skor/static/media/revicons.57fd05d4ae650374c8de.ttf",
     "static/media/revicons.woff": "/projekt_SOC_Skor/static/media/revicons.e8746a624ed098489406.woff",
     "index.html": "/projekt_SOC_Skor/index.html",
-    "main.b8e7e2c0.css.map": "/projekt_SOC_Skor/static/css/main.b8e7e2c0.css.map",
+    "main.084a63fa.css.map": "/projekt_SOC_Skor/static/css/main.084a63fa.css.map",
     "main.31f8baed.js.map": "/projekt_SOC_Skor/static/js/main.31f8baed.js.map"
   },
   "entrypoints": [
-    "static/css/main.b8e7e2c0.css",
+    "static/css/main.084a63fa.css",
     "static/js/main.31f8baed.js"
   ]
 }
