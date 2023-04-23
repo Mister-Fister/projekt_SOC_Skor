@@ -126,7 +126,7 @@ const pokus = () => {
     Spôsob platby: ${paymentMethodWithDiacritics}
     Miesto prevzatia: ${cityWithDiacritics}
     
-    Váš kód je ${a}
+    Vaša objednavka bola soracovaná a môže te si u prísť vyzdvihnúť o 4/5 pracivných dní s týmto kódom ${a}
   
 `;
 
