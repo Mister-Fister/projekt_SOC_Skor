@@ -31,5 +31,47 @@
     border: 2px solid;
     font-size: 18px;
 }
+.trihodrano{
+    width:20px ;
+    background-color: transparent;
+    border: none;
+    height: 20px;
+}
+.staletrirano{
+    height: 25px;
+}
+
+.user-profile{
+    background-color: rgb(59, 142, 250);
+    padding: 10px;
+    border-radius: 10px;
+    width: 500px;
+    position: relative; /* add this */
+}
+
+/* add this */
+.user-profile button {
+    position: absolute;
+    bottom: -20px;
+    right: 10px;
+}
+
+/* You can also adjust the style of the button and its image */
+.user-profile button img {
+    height: 25px;
+    transition: transform 0.3s ease-in-out; /* To add a smooth transition on hover */
+}
+
+.user-profile button:hover img {
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+
+
 
 

@@ -12,7 +12,8 @@
     flex-direction: row;
 }
 .prod-data{
- max-width: 52%;
+    margin-left: 30px;
+ max-width: 58%;
  min-width: 30%;
  padding-right: 10px;
  padding-left: 10px;
@@ -22,8 +23,6 @@
     max-height: 450px;
     min-height: 450px;
     min-width: 500px;
-    margin-left: 40px;
-    margin-right: 80px;
 }
 .prod-img-cont img{
     width: 100%;

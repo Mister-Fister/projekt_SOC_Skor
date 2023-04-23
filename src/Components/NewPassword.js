@@ -3,9 +3,13 @@ import { auth, db } from '../FirebaseConfigs/FirebaseConfig';
 import { updatePassword as updateAuthPassword } from 'firebase/auth';
 import { collection, getDocs, query, where, doc, updateDoc } from 'firebase/firestore';
 import Navbar from './Navbar';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 import './NewPassword.css'
 
 const NewPassword = () => {
+
+  const navigate = useNavigate()
+
     function GetCurrentUser() {
         const [user, setUser] = useState('');
     
@@ -45,6 +49,9 @@ const NewPassword = () => {
             setPasswordUpdated(true);
             setPasswordUpdateError('');
             handleUpdate();
+            setTimeout(() => {
+              navigate("/userprofile")
+            }, 2000);
           } catch (error) {
             setPasswordUpdated(false);
             setPasswordUpdateError(error.message);
@@ -74,40 +81,49 @@ const NewPassword = () => {
         <div>
           <Navbar />
           {!passwordValidated && (
-            <form onSubmit={handlePasswordValidation}>
-              <div>
+            <form className='new-pass-container' onSubmit={handlePasswordValidation}>
+              <div className='uf'>
+                <div className='uf'>Zadajte aktuálne heslo</div>
                 <input
                   type='password'
                   value={passwordCheck}
                   onChange={(e) => setPasswordCheck(e.target.value)}
                 />
               </div>
-              <div>
-                <button type='submit'>ok</button>
+              <div >
+                <button className='inpu' type='submit'>Pokračovať</button>
               </div>
+              <Link to="/userprofile" className='unga'>späť</Link>
+              {passwordUpdateError && (
+                <div className='error-msg'>Nesprávne heslo</div>
+              )}
             </form>
+            
           )}
           {passwordValidated && (
-            <form onSubmit={handlePasswordChange}>
-              <div>
-                <input
+            <form className='new-pass-container2' onSubmit={handlePasswordChange}>
+              <div className='uf'>
+                <div className='uf'>Nové heslo</div>
+                <input className='ef'
                   type='password'
                   value={newPassword}
                   onChange={(e) => setNewPassword(e.target.value)}
                 />
-    
-                <input
+
+                <div className='uf'>Zopakujte heslo</div>
+                <input 
                   type='password'
                   value={newPasswordCheck}
                   onChange={(e) => setNewPasswordCheck(e.target.value)}
                 />
               </div>
               <div>
-                <button type='submit'>Zmeniť heslo</button>
+                <button className='inpu' type='submit'>Zmeniť heslo</button>
               </div>
-              {passwordUpdated && <div>Heslo bolo úspešne zmenené!</div>}
+              <Link to="/userprofile" className='unga'>späť</Link>
+              {passwordUpdated && <div className='success-msg'>Heslo bolo úspešne zmenené!</div>}
               {passwordUpdateError && (
-                <div>Nastala chyba pri zmene hesla: {passwordUpdateError}</div>
+                <div className='error-msg'>Nastala chyba pri zmene hesla: {passwordUpdateError}</div>
               )}
             </form>
           )}

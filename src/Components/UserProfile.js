@@ -5,6 +5,7 @@ import { collection, getDocs, query, where, doc, updateDoc } from 'firebase/fire
 import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
 import './UserProfile.css';
+import cog from '../Components/assets/cog.png'
 
 const UserProfile = () => {
   function GetCurrentUser() {
@@ -31,32 +32,6 @@ const UserProfile = () => {
   }
   const loggeduser = GetCurrentUser();
 
-  const [newPassword, setNewPassword] = useState('');
-  const [passwordUpdated, setPasswordUpdated] = useState(false);
-  const [passwordUpdateError, setPasswordUpdateError] = useState('');
-
-
-  const handlePasswordChange = async (e) => {
-    e.preventDefault();
-
-    try {
-      await updateAuthPassword(auth.currentUser, newPassword);
-      setPasswordUpdated(true);
-      setPasswordUpdateError('')
-      handleUpdate();
-    } catch (error) {
-      setPasswordUpdated(false);
-      setPasswordUpdateError(error.message);
-    }
-  };
-
-
-  const handleUpdate = () =>{
-    updateDoc(doc(db,`users`, loggeduser[0].id),{
-      password: newPassword
-    });    
-       
-  }
 
   return (
     <div>
@@ -74,29 +49,19 @@ const UserProfile = () => {
               <span>Váš email</span>
               <span>{loggeduser[0].email}</span>
             </div>
-            <form onSubmit={handlePasswordChange}>
+            <form>
               <div className='data-row'>
                 <span>heslo</span>
                 <span>{loggeduser[0].password}</span>
                 
               </div>
             </form>
-            {passwordUpdated && (
-              <div className='data-row'>
-                Heslo bolo úspešne zmenené!
-              </div>
-            )}
-            {passwordUpdateError && (
-              <div className='data-row'>
-                Nastala chyba pri zmene hesla: {passwordUpdateError}
-              </div>
-            )}
             <div className='data-row'>
               <span>Vaše uid</span>
               <span>{loggeduser[0].uid}</span>
             </div>
 
-            <Link to="/newpass"><button type='submit'>Zmeniť heslo</button> </Link>
+            <Link to="/newpass"><button type='submit' className='trihodrano'><img className='staletrirano' src={cog} /></button> </Link>
           </div>
         ) : (
           <div>Nieste prihlásený</div>
