@@ -111,10 +111,8 @@ const paymentMethodWithDiacritics = paymentMethod
 const pokus = () => {
   let a = Math.floor(Math.random() * 900000000 + 100000000);
   const newRef = ref(database, `Objednavka/${a}`);
-
   const cartFinalRef = collection(db, `cart-final${loggeduser[0].uid}`);
   const cartRef = collection(db, `cart-${loggeduser[0].uid}`);
-
   const htmlMessage = `
     ${cartData.cartItems.map((item, index) => `
         číslo položky='${index}'
@@ -126,10 +124,7 @@ const pokus = () => {
     Spôsob platby: ${paymentMethodWithDiacritics}
     Miesto prevzatia: ${cityWithDiacritics}
     
-    Vaša objednavka bola soracovaná a môže te si u prísť vyzdvihnúť o 4/5 pracivných dní s týmto kódom ${a}
-  
-`;
-
+    Vaša objednavka bola soracovaná a môžete si u prísť vyzdvihnúť o 4/5 pracivných dní s týmto kódom ${a}`;
   Promise.all([
     set(newRef, newData),
     getDocs(cartFinalRef).then(querySnapshot => {
@@ -144,8 +139,7 @@ const pokus = () => {
       body: JSON.stringify({
         recipient: loggeduser[0].email,
         subject: "objednávka",
-        message: htmlMessage,
-              
+        message: htmlMessage,            
       })
     })
     .then(response => response.text())
@@ -157,55 +151,29 @@ const pokus = () => {
   .catch(error => console.error("Error writing document: ", error));
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     const [cartData, setCartData] = useState(null);
     const [loading, setLoading] = useState(true);
+    
   
     useEffect(() => {
       const getCartData = async () => {
-        const cartFinalRef = collection(db, `cart-finalrML5IpQvnedlyfMmwTEu7VhnCU42`);
-        const querySnapshot = await getDocs(cartFinalRef);
-        const cartData = querySnapshot.docs.map((doc) => doc.data())[0];
-        setCartData(cartData);
-        setLoading(false);
+        try {
+          const cartFinalRef = collection(db, `cart-final${loggeduser[0].uid}`);
+          const querySnapshot = await getDocs(cartFinalRef);
+          const cartData = querySnapshot.docs.map((doc) => doc.data())[0];
+          setCartData(cartData);
+          setLoading(false);
+        } catch (error) {
+          console.log("Error: ", error);
+        }
       };
-  
+    
       getCartData();
-    }, []);
+    }, [loggeduser]);
   
     if (loading) {
       return <p>Loading...</p>;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
       return(
         <div>
@@ -288,22 +256,6 @@ const pokus = () => {
 
       <p className='right'>Cena dokopy: {cartData.totalPrice}€</p>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
             </div>
             <div className='final-buttons'>            
